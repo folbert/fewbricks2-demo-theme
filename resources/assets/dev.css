@@ -1,0 +1,128 @@
+/**
+This file holds some CSS to make the default elements look a little bit better. You will probably want to move these
+rules to a scss file and delete this file. Also make sure to remove the enqueuing of this file. Search for dev.css in
+the theme to find what you are looking for.
+ */
+
+.ec-smart-field-group > .ec-m,
+.ec-module-group > .ec-m,
+.ec-m--standalone,
+.ec-m-article > .ec-m {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+/** Avoid margin collapsing **/
+.ec-module-group:before,
+.ec-module-group::after {
+  content: ' ';
+  display: table;
+}
+
+.container-fluid.ec-container-fluid--no-margin {
+  padding-left: 0;
+  padding-right: 0
+}
+
+.container-fluid.ec-container-fluid--no-margin .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+
+.container-fluid.ec-container-fluid--no-margin div[class^='col']:first-of-type  {
+  padding-left: 0;
+}
+
+.container-fluid.ec-container-fluid--no-margin div[class^='col']:last-of-type  {
+  padding-right: 0;
+}
+
+.ec-m-link-group--vertical .ec-m-link__wrapper {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.ec-m-link-group--vertical .ec-m-link__wrapper:last-of-type {
+  margin-bottom: 0;
+}
+
+.ec-m-teasers__col {
+  margin-bottom: 24px;
+}
+
+.ec-m-generic-teaser-1 {
+  text-align: center;
+}
+
+.ec-m-generic-teaser-1--text-over-image {
+  height: 100%;
+}
+
+.ec-m-generic-teaser-1--text-over-image .ec-m-generic-teaser-1__inner {
+  display: grid;
+  grid-template-columns: minmax(0,1fr);
+  height: 100%;
+}
+
+.ec-m-generic-teaser-1--text-over-image .ec-m-generic-teaser-1__inner > div {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+.ec-m-generic-teaser-1--text-over-image .ec-m-generic-teaser-1__image-inner {
+  height: 100%;
+}
+
+.ec-m-generic-teaser-1--text-over-image img,
+.ec-m-generic-teaser-1--text-to-the-right img,
+.ec-m-generic-teaser-1--text-to-the-left img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.ec-m-generic-teaser-1--text-below-image .ec-m-generic-teaser-1__image {
+  margin-bottom: 12px;
+}
+
+.ec-m-generic-teaser-1--text-over-image .ec-m-generic-teaser-1__content {
+  position: relative;
+  display: flex;''
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ec-m-generic-teaser-1--text-to-the-left .ec-m-generic-teaser-1__image,
+.ec-m-generic-teaser-1--text-to-the-right .ec-m-generic-teaser-1__image {
+  height: 100%;
+}
+
+.ec-m-generic-teaser-1--text-to-the-left .ec-m-generic-teaser-1__image-inner,
+.ec-m-generic-teaser-1--text-to-the-right .ec-m-generic-teaser-1__image-inner {
+  height: 100%;
+}
+
+.ec-m-generic-teaser-1--text-to-the-left picture,
+.ec-m-generic-teaser-1--text-to-the-right picture {
+  height: 100%;
+}
+
+.ec-m-generic-teaser-1__content-inner {
+  max-width: 580px;
+  padding: 24px;
+  margin: auto;
+}
+
+.ec-m-generic-teaser-1__text {
+  margin: 12px 0;
+}
+.ec-m-wysiwyg p:last-of-type {
+  margin-bottom: 0;
+}
+
+.lazy-loaded-wrapper {
+  padding-bottom: 0 !important;
+  height: auto !important;
+}
