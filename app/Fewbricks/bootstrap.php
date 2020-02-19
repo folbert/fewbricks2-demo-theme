@@ -6,7 +6,7 @@ require_once 'setup-acf.php';
 require_once 'setup-blade-directives.php';
 require_once 'setup-wysiwyg.php';
 require_once 'filters.php';
-require_once 'add_fields_and_field_groups.php';
+require_once 'add-fields-and-field-groups.php';
 
 add_action('wp_enqueue_scripts', function() {
 
