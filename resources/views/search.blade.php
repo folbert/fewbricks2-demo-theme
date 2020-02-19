@@ -5,7 +5,7 @@
 
   @if (!have_posts())
     <div class="alert alert-warning">
-      {{ __('Sorry, no results were found.', 'kan-echocrate-theme-text-domain') }}
+      {{ __('Sorry, no results were found.', 'fewbricks2-demo-theme') }}
     </div>
     {!! get_search_form(false) !!}
   @endif

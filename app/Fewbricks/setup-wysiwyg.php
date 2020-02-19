@@ -9,12 +9,10 @@ use function App\sage;
  */
 add_filter('acf/fields/wysiwyg/toolbars', function($toolbars) {
 
-    $echocrate_toolbars = sage('config')->get('echocrate_acf_toolbars');
+    $fewbricks_toolbars = sage('config')->get('fewbricks_acf_toolbars');
 
-    dump($toolbars);
-
-    if(is_array($echocrate_toolbars)) {
-        $toolbars = array_merge($toolbars, $echocrate_toolbars);
+    if(is_array($fewbricks_toolbars)) {
+        $toolbars = array_merge($toolbars, $fewbricks_toolbars);
     }
 
     return $toolbars;

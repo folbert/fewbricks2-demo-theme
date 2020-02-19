@@ -6,7 +6,7 @@ use function App\sage;
 
 /**
  * Class Images
- * @package App\EchoCrate\Helpers
+ * @package App\Fewbricks\Helpers
  */
 class Images
 {
@@ -164,7 +164,7 @@ class Images
 
         foreach($reversed_container_css_classes AS $reversed_container_css_class) {
 
-            if(in_array($reversed_container_css_class, sage('config')->get('echocrate_design_grid')['column_css_classes'])) {
+            if(in_array($reversed_container_css_class, sage('config')->get('fewbricks_design_grid')['column_css_classes'])) {
 
                 $container_css_class = $reversed_container_css_class;
                 break;
@@ -188,7 +188,7 @@ class Images
 
         $container_break_point_name = explode('-', $container_type)[1];
 
-        $design_grid_config = sage('config')->get('echocrate_design_grid');
+        $design_grid_config = sage('config')->get('fewbricks_design_grid');
 
         $container_break_point_passed = false;
 
@@ -233,7 +233,7 @@ class Images
 
         $sizes = [];
 
-        $design_grid_config = sage('config')->get('echocrate_design_grid');
+        $design_grid_config = sage('config')->get('fewbricks_design_grid');
 
         $column_width_factor = 1;
 
@@ -270,7 +270,7 @@ class Images
 
         $sizes = [];
 
-        $design_grid_config = sage('config')->get('echocrate_design_grid');
+        $design_grid_config = sage('config')->get('fewbricks_design_grid');
 
         $column_width_factor = 1;
 
@@ -304,7 +304,7 @@ class Images
      */
     private static function get_column_css_classes_data($column_css_classes) {
 
-        $design_grid_config = sage('config')->get('echocrate_design_grid');
+        $design_grid_config = sage('config')->get('fewbricks_design_grid');
 
         $column_css_classes_data = [];
 
@@ -383,7 +383,7 @@ class Images
     public static function get_source_media_attribute($breakpoint)
     {
 
-        $design_grid_config = sage('config')->get('echocrate_design_grid');
+        $design_grid_config = sage('config')->get('fewbricks_design_grid');
 
         $min_max = $design_grid_config['breakpoints'][$breakpoint]['min_max'] ?? false;
 

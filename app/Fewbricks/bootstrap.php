@@ -10,6 +10,6 @@ require_once 'add_fields_and_field_groups.php';
 
 add_action('wp_enqueue_scripts', function() {
 
-    wp_enqueue_style('echocratedev', get_template_directory_uri() . '/assets/dev.css');
+    wp_enqueue_style('fewbricks2-demo', get_template_directory_uri() . '/assets/dev.css');
 
 });

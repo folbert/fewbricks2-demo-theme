@@ -22,7 +22,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'kan-echocrate-theme-text-domain'), 'after' => '</p></nav>']) !!}
+          {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'fewbricks2-demo-theme'), 'after' => '</p></nav>']) !!}
         </div>
       </div>
     </div>

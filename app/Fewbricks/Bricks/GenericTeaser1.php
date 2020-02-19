@@ -148,15 +148,16 @@ class GenericTeaser1 extends Brick
 
             $this->set_container_css_classes(['container']);
             $this->set_row_css_classes(['row']);
-            $this->set_column_css_classes(['col-md-12']);
 
-        }
+            if(!$this->is_horizontal_layout()) {
 
-        if($this->get_is_horizontal_layout()) {
+                $this->set_column_css_classes(['col-md-12']);
 
-            $this->set_column_css_classes([]);
-            $view_data = array_merge($view_data, $this->get_horizontal_layout_view_data());
-            //$view_data['row_css_classes'] = ['row align-items-center'];
+            } else {
+
+                $this->set_column_css_classes([]);
+
+            }
 
         }
 
@@ -200,25 +201,13 @@ class GenericTeaser1 extends Brick
     /**
      * @return bool
      */
-    private function get_is_horizontal_layout()
+    private function is_horizontal_layout()
     {
 
         return in_array($this->get_field_value('layout'), [
             'text-to-the-right',
             'text-to-the-left',
         ]);
-
-    }
-
-    /**
-     * @param string $return
-     * @param string $string_separator
-     * @param string $void
-     * @return array|string
-     */
-    public function get_column_css_classes($return = 'array', $string_separator = ' ', $void = '') {
-
-        return parent::get_column_css_classes($return, $string_separator);
 
     }
 
@@ -246,7 +235,11 @@ class GenericTeaser1 extends Brick
             $view_data['main_wrapper_css_classes'] .= ' ec-m-generic-teaser-1--no-image';
         }
 
-        $view_data['is_horizontal_layout'] = $this->get_is_horizontal_layout();
+        $view_data['is_horizontal_layout'] = $this->is_horizontal_layout();
+
+        if($this->is_horizontal_layout()) {
+            $view_data = array_merge($view_data, $this->get_horizontal_layout_view_data());
+        }
 
         $this->set_wrapping_elms_css_classes();
 
